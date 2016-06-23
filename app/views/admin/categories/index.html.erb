@@ -10,7 +10,18 @@
     </tr>
     <% @categories.each do |category| %>
       <tr>
-        <td><%= link_to category.name, [:admin, category] %></td>
+        <td>
+          <%= link_to category.name, [:admin, category] %>
+        </td>
+        <td>
+          <%= link_to t("admin.categories.edit"), edit_admin_category_path(category),
+            class: "btn btn-sm btn-info" %>
+        </td>
+        <td>
+          <%= link_to t("admin.categories.Delete"), admin_category_path(category),
+            method: :delete, data: {confirm: t("admin.categories.sure")},
+            class: "btn btn-sm btn-danger" %>
+        </td>
       </tr>
     <% end %>
   </table>

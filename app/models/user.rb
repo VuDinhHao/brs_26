@@ -1,4 +1,10 @@
 class User < ActiveRecord::Base
+  attr_accessible :name, :email
+  Roles = [:admin, :default]
+
+  def is? requested_role
+    self.role == requested_role.to_s
+  end
   has_many :marks, dependent: :destroy
   has_many :reviews, dependent: :destroy
   has_many :comments, dependent: :destroy

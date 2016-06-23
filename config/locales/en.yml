@@ -45,6 +45,13 @@ en:
       all: "All Category"
       category_name: "Category Name"
       add_more_category: "Add more Category"
+      category_updated: "Category Updated"
+      edit_category: "Edit Category"
+      savechanges: "Save Changes"
+      edit: "Edit"
+      delete: "Category deleted"
+      Delete: "Delete"
+      sure: "You sure ?"
   shared:
     error: "error"
     the_form_contain: "The form contains"
