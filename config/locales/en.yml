@@ -53,6 +53,7 @@ en:
       list_book: "List books"
       list_request: "List requests"
       list_users: "List users"
+      user: "All Users"
   books:
     category: "Category"
     description: "Description"
@@ -189,3 +190,7 @@ en:
     confirmations:
       new:
         resent: "Resend confirmation instructions"
+  user:
+    all: "All User"
+    name: "User Name"
+    avatar: "Avatar"

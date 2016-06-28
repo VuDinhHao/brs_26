@@ -1,0 +1,27 @@
+<% provide :title, t("user.all") %>
+<h1><%= t "user.all" %></h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <table class="table table-striped">
+      <tr>
+        <th><%= t "users.name" %></th>
+        <th><%= t "users.avatar" %></th>
+      </tr>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= link_to @users.name, "#" %></td>
+          <td>
+            <% if user.avatar.present? %>
+              <%= link_to image_tag(user.avatar, size: Setting.users.size), "#" %>
+            <% else %>
+              <%= link_to image_tag(Settings.users.url, size: Settings.users.size),
+                "#" %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+<%= paginate @users %>
+<%= page_entries_info @users %>

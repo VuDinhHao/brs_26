@@ -14,3 +14,7 @@ admin:
   users:
     size: "70x70"
     url: "assets/avata.jpg"
+users:
+  size: "50x50"
+  url: "/assets/user_3.png"
+  pic_size: 5
